@@ -10,23 +10,35 @@ body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   height: 100vh;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   /* padding: 50px; */
 }
 
 .navbar {
+  z-index: 10;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 5px 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background-color: whitesmoke;
-  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  /* overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; */
 }
 
+.list li a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 3px 5px;
+}
 .navbar a {
   text-decoration: none;
   color: #fff;
@@ -59,11 +71,12 @@ body {
   padding: 5px 8px;
 }
 
-.list li a:hover {
+.list li a span:hover {
   background-color: rgba(128, 128, 128, 0.338);
+  border-radius: 50px;
 }
 
-.bookmarkLogo{
+.bookmarkLogo {
   height: 20px;
   width: 20px;
 }
@@ -109,9 +122,8 @@ li {
   vertical-align: middle;
 }
 
-.second_nav,
-footer {
-  padding: 4px 20px;
+.second_nav {
+  padding: 5px 20px;
 }
 
 .second_nav img {
@@ -177,7 +189,7 @@ footer {
 
 .center {
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   margin-top: 175px;
   transform: translate(-50%, -50%);
@@ -337,17 +349,23 @@ footer {
   height: 20px;
 }
 
-.custom{
-  position: absolute;
-  top: 450px;
-  right: -100px;
+.custom {
+  position: sticky;
+  top: 500px;
+  margin-top: 410px;
+  /* bottom: 185px; */
+  left: 1050px;
+  background-color: yellow;
+  width: 150px;
+  padding: 5px;
+  /* font-size: 20px; */
 }
 
 @media screen and (max-width: 948px) {
-  .center{
+  .center {
     width: 300px;
   }
-  .mic{
+  .mic {
     left: 280px;
   }
   .suggestion {
