@@ -8,6 +8,9 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 </head>
 
 <body>
@@ -46,9 +49,118 @@
             <ul class="right_nav">
                 <li><a href="#">Gmail</a></li>
                 <li><a href="#">Images</a></li>
-                <li><a href="#"><img class="apps" src="https://thumb.ibb.co/gykLCw/grid_menu.png" /></a></li>
-                <li class="sign_in"><a>F</a></li>
+                <li onclick="toggle_menu_popover()"><a><img class="apps"
+                            src="https://thumb.ibb.co/gykLCw/grid_menu.png" /></a></li>
+                <li class="sign_in" onclick="toggle_signin_popover()"><a>F</a></li>
             </ul>
+            <div id="popover-menu">
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+                <div class="parent-menu">
+                    <img src="./icons8-youtube.svg" alt="">
+                    <p>Youtube</p>
+                </div>
+            </div>
+            <div id="popover">
+                <!-- <h1>popover</h1>   -->
+                <div class="top-popover">
+                    <div class="top-popover-header">
+                        <div class="top-popover-left-header">
+                            <p class="sign_in active"><a>F</a></p>
+                        </div>
+                        <div class="top-popover-right-header">
+                            <p class="popup-title">Flight Booking</p>
+                            <p class="popup-desc">flightemailapi@gmail.com</p>
+                            <button class="manage-button">Manage your google account</button>
+                        </div>
+                    </div>
+                    <div class="top-popover-header">
+                        <div class="top-popover-left-header">
+                            <p class="sign_in"><a>T</a></p>
+
+                        </div>
+                        <div class="top-popover-right-header">
+                            <p class="popup-title">Tarun S</p>
+                            <p class="popup-desc">kjstarun@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="top-popover-header">
+                        <div class="top-popover-left-header">
+                            <!-- <p class="sign_in"><a>F</a></p> -->
+                        </div>
+                        <div class="top-popover-right-header">
+                            <p class="popup-title">Add another account</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="down-popover"></div>
+            </div>
         </nav>
         <section class="center">
             <img src="./icons8-search.svg" class="search-logo">
@@ -151,6 +263,38 @@
     <!-- <p class="custom">
         Custom
     </p> -->
+    <script>
+        const toggle_signin_popover = () => {
+            console.log("called");
+            if (document.getElementById("popover-menu").style.display === "flex") {
+                document.getElementById("popover-menu").style.display = "none"
+            }
+            if (document.getElementById("popover").style.display === "flex") {
+                console.log("match");
+                document.getElementById("popover").style.display = "none"
+            } else {
+                document.getElementById("popover").style.display = "flex"
+            }
+        }
+        // let body = document.body
+        // body.onclick = function () {
+
+        // }
+        const toggle_menu_popover = () => {
+            console.log("called");
+            if (document.getElementById("popover").style.display === "flex") {
+                console.log("match");
+                document.getElementById("popover").style.display = "none"
+            }
+            if (document.getElementById("popover-menu").style.display === "flex") {
+                console.log("match");
+                document.getElementById("popover-menu").style.display = "none"
+            } else {
+                document.getElementById("popover-menu").style.display = "flex"
+            }
+        }
+
+    </script>
 </body>
 
 </html>
