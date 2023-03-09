@@ -379,7 +379,7 @@ li {
 }
 
 #popover {
-  height: 400px;
+  height: 340px;
   width: 400px;
   /* background-color: #4285f4; */
   background-color: grey;
@@ -405,7 +405,7 @@ li {
 
 .down-popover {
   height: 100px;
-  background-color: olivedrab;
+  /* background-color: olivedrab; */
   margin: 0 20px;
 }
 
@@ -454,6 +454,10 @@ li {
   cursor: pointer;
 }
 
+.manage-button:hover{
+  background-color: rgba(128, 128, 128, 0.414);
+}
+
 .active {
   padding: 20px;
 }
@@ -471,7 +475,7 @@ li {
   z-index: 10;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 15px 20px;
+  padding: 20px 20px;
   gap: 10px;
   border-radius: 25px;
   display: none;
@@ -491,7 +495,6 @@ li {
 
 ::-webkit-scrollbar {
   width: 5px;
-  height: 50px;
   /* background-color: gray; */
 }
 
@@ -513,3 +516,32 @@ li {
   background: transparent;
   margin-top: 10px;
 } */
+
+.down-popover {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  margin-left: 2px;
+}
+
+.popover-footer ul {
+  list-style-type: none;
+}
+
+.popover-footer {
+  border-top: 1px solid rgb(162, 162, 162);
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: smaller;
+}
+
+.active-header {
+  border-bottom: 1px solid gray;
+}
+
+.non-active-header:hover{
+  background-color: rgba(106, 106, 106, 0.499);
+}
